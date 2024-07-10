@@ -46,15 +46,15 @@ const Feed = (props) => {
             {/*<Box>*/}
                 {calls && calls.length ? (
                     <>
-                        <label style={{ fontSize: 20, fontWeight: 'bold', marginLeft: 10, marginTop: 5 }}>Activity Feed</label>
+                        <label style={{ fontSize: 20, fontWeight: 'bold', marginLeft: 20 }}>Activity Feed</label>
 
-                        <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+                        <List sx={{ width: '100%', maxWidth: 325, bgcolor: 'background.paper' }}>
                             {calls && calls.map(item => (
                                 <ListItem key={item.id} button onClick={() => singleCallClicked(item.id)} sx={{
                                     borderRadius: '10px',
                                     border: '1px solid #ccc',
                                     padding: '10px',
-                                    marginTop: '5px',
+                                    margin:'5px 12px 0px 12px'
                                 }}
                                           secondaryAction={
                                               <div >

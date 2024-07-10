@@ -35,7 +35,7 @@ const Detail = ({ tabIndex, index, id }) => {
         <div hidden={tabIndex !== index}>
             <Grid container justifyContent="center" alignItems="center">
                 <Grid item>
-                    <Avatar style={{ width: 100, height: 100, marginBottom: 20 }} />
+                    <Avatar style={{ width: 80, height: 80, marginBottom: 4,marginTop:15}} />
                 </Grid>
             </Grid>
             <List>
@@ -43,11 +43,11 @@ const Detail = ({ tabIndex, index, id }) => {
                     display: 'flex',
                     justifyContent: 'center',
                     gap: '30px',
-                    marginBottom: 3
+                    marginBottom:1,
                 }}>
-                    <CallIcon color="primary" fontSize="large"></CallIcon>
-                    <MessageIcon color="primary" fontSize="large"></MessageIcon>
-                    <VideocamIcon color="primary" fontSize="large"></VideocamIcon>
+                    <CallIcon color="primary" fontSize="medium"></CallIcon>
+                    <MessageIcon color="primary" fontSize="medium"></MessageIcon>
+                    <VideocamIcon color="primary" fontSize="medium"></VideocamIcon>
                 </ListItem>
                 <Divider variant="middle" component="li" />
             </List>
@@ -63,7 +63,7 @@ const Detail = ({ tabIndex, index, id }) => {
                     key={userInfo && userInfo.id}
                     button
                     sx={{
-                        padding: '6px 10px 6px 10px',
+                        padding: '5px 10px 5px 10px',
                         marginTop: '5px',
                     }}>
                     <ListItemAvatar>

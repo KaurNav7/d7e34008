@@ -4,7 +4,7 @@ export default function Header(){
 
     return(
         <>
-            <div className="flex flex-col items-center justify-center  border-gray-200 border-b-2 px-[20px] py-[14px]">
+            <div className="flex flex-col items-center justify-center  border-gray-200 border-b-2 px-[20px] py-[14px] mb-3">
 
 
                 <svg className="h-[40px]"  viewBox='0 0 486 168' version='1.1' xmlns='http://www.w3.org/2000/svg'>

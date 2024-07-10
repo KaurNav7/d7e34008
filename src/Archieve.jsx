@@ -41,15 +41,15 @@ const Archieve = (props) => {
             {/*<Box >*/}
                 {calls && calls.length > 0 ? (
                     <>
-                        <label style={{ fontSize: 20, fontWeight: 'bold', marginLeft: 10, marginTop: 5 }}>Archive Calls</label>
-                        <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+                        <label style={{ fontSize: 20, fontWeight: 'bold', marginLeft: 20, marginTop: 5 }}>Archive Calls</label>
+                        <List sx={{ width: '100%', maxWidth: 325, bgcolor: 'background.paper' }}>
                             {calls.map(item => (
                                 <div key={item.id}>
                                     <ListItem button onClick={() => singleCallClicked(item.id)} sx={{
                                         borderRadius: '10px',
                                         border: '1px solid #ccc',
                                         padding: '10px',
-                                        marginTop: '5px',
+                                        margin:'5px 12px 0px 12px'
                                     }}
                                               secondaryAction={
                                                   <div onClick={(event) => unArhiveButtonClicked(event, item.id)}>
