@@ -83,6 +83,7 @@ const Detail = ({handleBackButton, tabIndex, index, id }) => {
                     </ListItemAvatar>
                     <ListItemText primary={userInfo && `Last for ${userInfo.duration} sec`} secondary={userInfo && userInfo.is_archived == true ? 'Archived' : 'Not archived'} />
                 </ListItem>
+                <Divider variant="middle" component="li" />
             </List>
         </div>
     )
