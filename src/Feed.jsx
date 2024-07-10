@@ -1,5 +1,4 @@
 import React from 'react';
-// import Box from '@mui/material/Box';
 import ArchiveIcon from '@mui/icons-material/Archive';
 import List from '@mui/material/List';
 import PhoneForwardedIcon from '@mui/icons-material/PhoneForwarded';
@@ -8,6 +7,8 @@ import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import PhoneCallbackIcon from '@mui/icons-material/PhoneCallback';
 import CallIcon from '@mui/icons-material/Call';
+import Tooltip from '@mui/material/Tooltip';
+
 
 const Feed = (props) => {
     const { tabIndex, index, calls, singleCallClicked, fetchCallsData } = props;
@@ -58,12 +59,14 @@ const Feed = (props) => {
                                 }}
                                           secondaryAction={
                                               <div >
+                                                  <Tooltip title="Archive call" placement="top">
                                                   <ArchiveIcon
                                                       sx={{marginRight:2}}
                                                       edge="end"
                                                       color="primary"
                                                       onClick={(event) => arhieveButtonClicked(event, item.id)}
                                                   />
+                                                  </Tooltip>
                                                   <CallIcon
                                                       edge="end"
                                                       color="primary"

@@ -6,9 +6,9 @@ import VideocamIcon from '@mui/icons-material/Videocam';
 import CallMadeIcon from '@mui/icons-material/CallMade';
 import CallReceivedIcon from '@mui/icons-material/CallReceived';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
-
-const Detail = ({ tabIndex, index, id }) => {
+const Detail = ({handleBackButton, tabIndex, index, id }) => {
 
     const [userInfo, setUserInfo] = useState(null);
     useEffect(() => {
@@ -33,9 +33,10 @@ const Detail = ({ tabIndex, index, id }) => {
 
     return (
         <div hidden={tabIndex !== index}>
+            <ArrowBackIcon style={{ marginLeft:10}} onClick={()=>handleBackButton()}></ArrowBackIcon>
             <Grid container justifyContent="center" alignItems="center">
                 <Grid item>
-                    <Avatar style={{ width: 80, height: 80, marginBottom: 4,marginTop:15}} />
+                    <Avatar style={{ width: 80, height: 80, marginBottom: 4}} />
                 </Grid>
             </Grid>
             <List>

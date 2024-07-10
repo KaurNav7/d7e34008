@@ -1,7 +1,6 @@
 import Header from './Header.jsx';
 import React, { useState, useEffect } from 'react';
 // import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
-// import Box from '@mui/material/Box';
 import Feed from './Feed.jsx';
 import Archieve from './Archieve.jsx';
 import Detail from './CallDetail.jsx';
@@ -18,6 +17,7 @@ function App() {
     const [tab, setTab] = React.useState(0);
     const [callId, setCallId] = React.useState(null);
     const [openDialog, setOpenDialog] = React.useState(false);
+    const [previousPage,setPreviousPage]=React.useState(0);
 
     const fetchCallsData = async () => {
         try {
@@ -48,6 +48,7 @@ function App() {
 
     const handleItemClick = (itemId) => {
         setCallId(itemId);
+        setPreviousPage(tab);
         setTab(2);
     };
 
@@ -93,6 +94,10 @@ function App() {
 
     };
 
+    const handleBackButton=()=>{
+        setTab(previousPage)
+    }
+
   return (
     <>
       <div className="flex items-center justify-center h-screen bg-[#233142] p-4" >
@@ -108,7 +113,7 @@ function App() {
                       </Feed>
                       {
                           tab == 2 &&
-                          <Detail tabIndex={tab} index={2} id={callId}>
+                          <Detail handleBackButton={handleBackButton} tabIndex={tab} index={2} id={callId}>
                           </Detail>
                       }
                       <Archieve tabIndex={tab} index={1} calls={archieveData} singleCallClicked={handleItemClick}

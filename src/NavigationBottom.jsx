@@ -6,7 +6,6 @@ import Box from '@mui/material/Box';
 import UnarchiveIcon from '@mui/icons-material/Unarchive';
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
-import FavoriteIcon from '@mui/icons-material/Favorite';
 import ArchiveIcon from '@mui/icons-material/Archive';
 import Paper from '@mui/material/Paper';
 
@@ -56,7 +55,7 @@ const  NavigationBottom = (props) => {
                 </Box>
                 <BottomNavigation showLabels tab={tab} onChange={handleTabChange}>
                     <BottomNavigationAction label="Feed" icon={<FeedIcon />} />
-                    <BottomNavigationAction label="Archive" icon={<ArchiveIcon />} />
+                    <BottomNavigationAction label="Archived" icon={<ArchiveIcon />} />
                 </BottomNavigation>
             </Box>
         </Paper>

@@ -7,6 +7,7 @@ import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import PhoneCallbackIcon from '@mui/icons-material/PhoneCallback';
 import UnarchiveIcon from '@mui/icons-material/Unarchive';
+import Tooltip from '@mui/material/Tooltip';
 
 
 const Archieve = (props) => {
@@ -41,7 +42,7 @@ const Archieve = (props) => {
             {/*<Box >*/}
                 {calls && calls.length > 0 ? (
                     <>
-                        <label style={{ fontSize: 20, fontWeight: 'bold', marginLeft: 20, marginTop: 5 }}>Archive Calls</label>
+                        <label style={{ fontSize: 20, fontWeight: 'bold', marginLeft: 20, marginTop: 5 }}>Archived Calls</label>
                         <List sx={{ width: '100%', maxWidth: 325, bgcolor: 'background.paper' }}>
                             {calls.map(item => (
                                 <div key={item.id}>
@@ -53,7 +54,7 @@ const Archieve = (props) => {
                                     }}
                                               secondaryAction={
                                                   <div onClick={(event) => unArhiveButtonClicked(event, item.id)}>
-                                                      <UnarchiveIcon color="primary" edge="end" />
+                                                      <Tooltip title="Unarchive call" placement="top"> <UnarchiveIcon color="primary" edge="end" /></Tooltip>
                                                   </div>
                                               }>
                                         <ListItemAvatar>
